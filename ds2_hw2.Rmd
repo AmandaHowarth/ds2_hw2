@@ -1,0 +1,19 @@
+---
+title: "hw2"
+author: "Amanda Howarth"
+date: "3/19/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = T, message = FALSE, results='hide', warning=FALSE}
+library(caret) # only for plot
+library(splines)
+library(lasso2) # only for data
+library(mgcv)
+library(tidyverse)
+library(ggplot2)
+```
