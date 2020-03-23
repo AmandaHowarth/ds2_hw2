@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r, echo = T, message = FALSE, results='hide', warning=FALSE}
-library(caret) # only for plot
+library(caret) 
 library(splines)
 library(dplyr)
 library(mgcv)
@@ -106,7 +106,7 @@ plot(gam.m2)
 vis.gam(gam.m3, view = c("f_undergrad","p_undergrad"), 
         plot.type = "contour", color = "topo")
 ```
-Three GAM models are plotted above. In the first model (gam.m1), all terms are treated as linear terms. S functions were incorporated into the second GAM model (gam.m2) for some predictors that exhibited possible non-linear relationships with the outcome variable (out-of-state tuition) in scatterplots in Question 1A. Lastly, a bivariate function was added to the 3rd model (gam.m3), along with s functions. The ANOVA model allows us to see if the simple, linear model (gam.m1) is sufficient to explain the association between the predictors and out of state tuition. The second model has a p-value of 1.99x10^6 and the third model has a p-value of 0.67. The second model is significant, and thus we choose this model over the simple linear model. 
+In the first model (gam.m1), all terms are treated as linear terms. S functions were incorporated into the second GAM model (gam.m2) for some predictors that exhibited possible non-linear relationships with the outcome variable (out-of-state tuition) in scatterplots in Question 1A. Lastly, a bivariate function was added to the 3rd model (gam.m3), along with s functions. The ANOVA model allows us to see if the simple, linear model (gam.m1) is sufficient to explain the association between the predictors and out of state tuition. The second model has a p-value of 1.99x10^6 and the third model has a p-value of 0.67. The second model is significant, and thus we choose this model over the simple linear model. 
 
 # QUESTION 1D
 Fit a multivariate adaptive regression spline (MARS) model using all the predictors. Report the final model. Present the partial dependence plot of an arbitrary predictor in your finalmodel.
@@ -178,7 +178,7 @@ pred2
 ```
 Based on the second generalized additive model in Questions 1C (gam.m2), the out-of-state tuition for Columbia University is predicted to be $19,149.33.
 
-Based on the MARS model in Questions 1D, the out-of-state tuition for Columbia University is predicted to be $16,698.41. 
+Based on the MARS model in Questions 1D, the out-of-state tuition for Columbia University is predicted to be $18,520.5. 
 
 
 
